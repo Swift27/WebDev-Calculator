@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="start()">
+    <div class="container">
+      <div class="top section">
+        <h5 class="top">calc</h5>
+        <div class="switch-section">
+          <p class="top">Theme</p>
+          <div class="switch-section-toggle">
+            <ul>
+              <li class="top">1</li>
+              <li class="top">2</li>
+              <li class="top">3</li>
+            </ul>
+            <input
+              id="toggle-switch"
+              onchange="themeSwitched()"
+              type="range"
+              min="1"
+              step="1"
+              max="3"
+              value="2"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="display section">
+        <h2>0</h2>
+      </div>
+      <div class="buttons section">
+        <div class="grid">
+          <button id="seven" class="number-button" onclick="numOp(7)">7</button>
+          <button id="eight" class="number-button" onclick="numOp(8)">8</button>
+          <button id="nine" class="number-button" onclick="numOp(9)">9</button>
+          <button id="delete" class="del-reset-button" onclick="deleteNum()">DEL</button>
+          <button id="four" class="number-button" onclick="numOp(4)">4</button>
+          <button id="five" class="number-button" onclick="numOp(5)">5</button>
+          <button id="six" class="number-button" onclick="numOp(6)">6</button>
+          <button id="plus" class="operation-button">+</button>
+          <button id="one" class="number-button" onclick="numOp(1)">1</button>
+          <button id="two" class="number-button" onclick="numOp(2)">2</button>
+          <button id="three" class="number-button" onclick="numOp(3)">3</button>
+          <button id="minus" class="operation-button">-</button>
+          <button id="dot" class="operation-button">.</button>
+          <button id="zero" class="number-button" onclick="numOp(0)">0</button>
+          <button id="divide" class="operation-button">/</button>
+          <button id="multiply" class="operation-button">x</button>
+          <button id="reset" class="del-reset-button" onclick="clearDisplay()">RESET</button>
+          <button id="equals" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
